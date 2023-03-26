@@ -9,6 +9,7 @@
 
 import time
 import pandas as pd
+from tabulate import tabulate
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -151,7 +152,7 @@ def show_raw_data(df):
     rowend = 5
     maxrows = len(df.index)
     while showdata == 'yes' and rowend < maxrows:
-        print(df.iloc[rowstart:rowend])
+        print(tabulate(df.iloc[rowstart:rowend], headers ="keys"))
         showdata = input("\nDo you want to see the further 5 rows of the file? If yes, type yes.\n")
         rowstart=rowstart + 5
         rowend= rowend + 5
@@ -235,17 +236,15 @@ def user_stats(df, city):
 
     """calculate + Display counts of user types"""
     countsOfUserTypes = df['User Type'].value_counts()
-    print("Count of user types:\n")
-    print(countsOfUserTypes)
-    print("\n\n")
+    print("Count of user types:\n" + str(countsOfUserTypes) + "\n\n")
+
 
     """calculate + display birth year and gender --> is not available in washington file"""
     if city == 'chicago' or city == 'new york city':
         # Display counts of gender
         countsOfGender = df['Gender'].value_counts()
-        print("Count of user gender:\n")
-        print(countsOfGender)
-        print("\n\n")
+        print("Count of user gender:\n" + str(countsOfGender) + "\n\n")
+
         
         """ Display earliest, most recent, and most common year of birth"""
         """"earliest birth year"""
