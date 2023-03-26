@@ -11,6 +11,9 @@ Currently the cities washington, new york city and chicago are included.
 The project asks the user, which data he would like to analyse, if he wants to see raw data and if he wants to filter for a specific month or weekday.
 In the end some statistics are being calculated and displayed.
 
+### Software needed
+- install python 3, pandas (e.g. using Anaconda)
+
 ### Files used
 bikeshare.py
 washington.csv
