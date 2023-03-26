@@ -236,9 +236,8 @@ def user_stats(df, city):
 
     """calculate + Display counts of user types"""
     countsOfUserTypes = df['User Type'].value_counts()
-    print("Count of user types:\n")
-    print(countsOfUserTypes)
-    print("\n\n")
+    print("Count of user types:\n" + str(countsOfUserTypes) + "\n\n")
+
 
     """calculate + display birth year and gender --> is not available in washington file"""
     if city == 'chicago' or city == 'new york city':
