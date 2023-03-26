@@ -20,6 +20,11 @@ washington.csv
 new_york_city.csv
 chicago.csv
 
+# How to
+Prerequisite: python installed and library pandas
+Move bikeshare.py + .csv files into one folder.
+Open bikeshare.py using anaconda, run the code and enter the requested input// run the file in the terminal.
+
 ### Credits
 Credits to udacity for the program and this way of practical learning.
 Credits to the feedback of the reviewers which is given pretty fast and detailed after submitting a project.
