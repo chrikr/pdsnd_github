@@ -243,9 +243,8 @@ def user_stats(df, city):
     if city == 'chicago' or city == 'new york city':
         # Display counts of gender
         countsOfGender = df['Gender'].value_counts()
-        print("Count of user gender:\n")
-        print(countsOfGender)
-        print("\n\n")
+        print("Count of user gender:\n" + str(countsOfGender) + "\n\n")
+
         
         """ Display earliest, most recent, and most common year of birth"""
         """"earliest birth year"""
